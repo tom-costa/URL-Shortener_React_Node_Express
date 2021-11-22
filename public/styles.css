@@ -1,0 +1,25 @@
+input[type='submit'] {
+    display:block;
+    margin:10px auto;
+    border-radius:5px;
+}
+
+input[type='text']{
+    display:block;
+    margin:auto;
+    width:400px;
+    padding:10px;
+    border-radius:5px;
+}
+
+.container{
+    background:rgb(170, 170, 231);
+    display:block;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height:300px;
+    margin:150px auto;
+    text-align: center;
+    padding: 50px 50px;
+}
