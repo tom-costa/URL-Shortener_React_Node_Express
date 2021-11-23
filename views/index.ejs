@@ -4,27 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" type="text/css">
     <title>URL Shortener</title>
 </head>
 <body>
-    <div class="container">
-
-        <h1>URL Shortener</h1>
-        <form action="/" method="post">
-            <% if (locals.error) { %>
-                <p class="error"> <%= error %> </p>
-                <% } %>
-                
-                <input type="text" type="url" name="url" placeholder="URL Here...">
-                <input type="submit" value="create URL">
-            </form>
-            
-            <div class="short_url">
-                <% if (locals.short_url) { %>
-                    <a href="<%= short_url %>"> <%= short_url %> </a>
-                    <% } %>
-                </div>
-            </div>
-            </body>
+    <div class="main-container">
+        <h1> ✂️ URL Shortener ✂️ </h1>
+        <div class="input-container">
+        <form action="/shortUrls" method="POST">
+            <label for="fullUrl" class="sr-only">URL</label>
+            <input required placeholder="URL" type="url" name="fullUrl" id="fullUrl">
+            <button class="btn" type="submit">Shorten</button>
+          </form>
+        </div>
+          <table class="table">
+            <thead>
+              <tr>
+                <th>Full URL</th>
+                <th>Short URL</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% shortUrls.forEach(shortUrl => { %>
+                <tr>
+                  <td><a href="<%= shortUrl.full %>"><%= shortUrl.full %></a></td>
+                  <td><a href="<%= shortUrl.short %>"><%= shortUrl.short %></a></td>
+                </tr>
+              <% }) %>
+            </tbody>
+          </table>
+        </div>
+    </body>
 </html>
