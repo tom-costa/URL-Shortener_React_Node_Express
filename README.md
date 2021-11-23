@@ -4,12 +4,13 @@
 
 # URL Shortner Take Home Challenge
 
-<p>For this task, I was meant to use docker-compose, React and Node.js to create the UI and backend</p>
+<p>For this task, I was asked to use Docker-Compose, React and Node.js to create the UI and backend</p>
 <br>
 <p>To run:</p>
 <ul>
 <li> clone repo</li>
-<ul> Install dependecies:
+<li> Install dependecies: </li>
+<ul> 
 <li> ejs </li>
 <li> express </li>
 <li> http-errors </li>
