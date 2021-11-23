@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="https://github.com/tom-costa/URL-Shortener_React_Node_Express/URL-Shortener.png" alt="URL-Shortener png"/>
+  <img src="https://github.com/tom-costa/URL-Shortener_React_Node_Express/blob/main/URL-Shortener.png" alt="URL-Shortener png"/>
 </p>
 
 # URL Shortner Take Home Challenge
