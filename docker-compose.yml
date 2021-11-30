@@ -1,12 +1,19 @@
-version: '3.4'
+version: '3.7'
 
 services:
-  urlshortenerreactnodeexpress:
-    image: urlshortenerreactnodeexpress
+  url_shortener_react_node_express:
     build:
       context: .
       dockerfile: ./Dockerfile
     environment:
       NODE_ENV: production
+      PORT: 3000
     ports:
       - 3000:3000
+    command:
+      bash -c "./wait-for-it.sh mongo:27017 -t 10 && npm start"
+  
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017

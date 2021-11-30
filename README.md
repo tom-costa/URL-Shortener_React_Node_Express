@@ -17,5 +17,5 @@
 <li> mongoose </li>
 <li> shortid </li>
 </ul>
-<li> run npm start </li>
+<li> docker-compose build && docker-compose up </li>
 </ul>
